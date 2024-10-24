@@ -17,8 +17,15 @@ def split(input):
     return
     str new string with line break in the middle
     '''
+    modSentence = str(input)
+    cutPoint = int(len(modSentence)/2)
+    if modSentence[cutPoint-1] == ' ' or modSentence[cutPoint] == ' ':
+        modSentence = modSentence.replace(modSentence[:cutPoint],f"{modSentence[:cutPoint]}\n")
+    else:
+        modSentence = modSentence.replace(modSentence[:cutPoint],f"{modSentence[:cutPoint]}-\n")
 
-    return
+    print(modSentence)
+    return modSentence
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
