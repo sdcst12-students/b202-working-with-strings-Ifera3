@@ -7,6 +7,8 @@ Remove all of the HTML and display just the real contents of the page.
 import requests, time
 
 pageHTML = requests.get("https://sd.deltasd.bc.ca/")
-time.sleep(5)
+time.sleep(1)
+
+#not reatrning anything past halfawy throgh the styles, no real contents of page returned
 
 print(pageHTML.text)
